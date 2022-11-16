@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+    <link rel="stylesheet" th:href="@{style.css}"  type="text/css">
+</head>
+<body>
+<h1>An overview of our employees</h1>
+<table>
+    <tr
+            th:each="employee : ${employees}">
+        <td th:text="${employee.getEmployeeID()}"></td> <!--thymeleaf kan se javaklasser direkte når objekt lægges i model-->
+        <td th:text="${employee.getName()}"></td>
+    </tr>
+</table>
+</body>
+</html>

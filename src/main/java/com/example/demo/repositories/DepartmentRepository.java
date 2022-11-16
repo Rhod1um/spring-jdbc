@@ -14,7 +14,7 @@ public class DepartmentRepository implements IRepository<Department>{
     @Override
     public List<Department> getAllEntities() {
         Connection conn = DatabaseConnectionManager.getConnection();
-        List<Department> allDepartments = new ArrayList<Department>();
+        List<Department> allDepartments = new ArrayList<>();
         try {
             PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM departments");
             ResultSet rs = pstmt.executeQuery();
